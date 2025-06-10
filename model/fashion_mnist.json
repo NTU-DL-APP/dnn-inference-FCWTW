@@ -1,0 +1,44 @@
+[
+  {
+    "name": "flatten",
+    "type": "Flatten",
+    "config": {},
+    "weights": []
+  },
+  {
+    "name": "dense_1",
+    "type": "Dense",
+    "config": {
+      "units": 64,
+      "activation": "relu"
+    },
+    "weights": [
+      "dense_1/kernel:0",
+      "dense_1/bias:0"
+    ]
+  },
+  {
+    "name": "dense_2",
+    "type": "Dense",
+    "config": {
+      "units": 32,
+      "activation": "relu"
+    },
+    "weights": [
+      "dense_2/kernel:0",
+      "dense_2/bias:0"
+    ]
+  },
+  {
+    "name": "dense_output",
+    "type": "Dense",
+    "config": {
+      "units": 10,
+      "activation": "softmax"
+    },
+    "weights": [
+      "dense_output/kernel:0",
+      "dense_output/bias:0"
+    ]
+  }
+]

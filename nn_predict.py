@@ -3,12 +3,25 @@ import json
 
 # === Activation functions ===
 def relu(x):
-    # TODO: Implement the Rectified Linear Unit
-    return x
+    """
+    Rectified Linear Unit activation function
+    ReLU(x) = max(0, x)
+    """
+    return np.maximum(0, x)
 
 def softmax(x):
-    # TODO: Implement the SoftMax function
-    return x
+    """
+    Softmax activation function for multi-class classification
+    Applies softmax along the last axis (classes)
+    """
+    # Subtract max for numerical stability (prevents overflow)
+    x_shifted = x - np.max(x, axis=-1, keepdims=True)
+    
+    # Compute exponentials
+    exp_x = np.exp(x_shifted)
+    
+    # Normalize by sum of exponentials
+    return exp_x / np.sum(exp_x, axis=-1, keepdims=True)
 
 # === Flatten ===
 def flatten(x):
