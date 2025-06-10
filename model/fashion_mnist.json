@@ -9,7 +9,7 @@
     "name": "dense_1",
     "type": "Dense",
     "config": {
-      "units": 64,
+      "units": 256,
       "activation": "relu"
     },
     "weights": [
@@ -21,7 +21,7 @@
     "name": "dense_2",
     "type": "Dense",
     "config": {
-      "units": 32,
+      "units": 128,
       "activation": "relu"
     },
     "weights": [
@@ -30,15 +30,27 @@
     ]
   },
   {
-    "name": "dense_output",
+    "name": "dense_3",
+    "type": "Dense",
+    "config": {
+      "units": 64,
+      "activation": "relu"
+    },
+    "weights": [
+      "dense_3/kernel:0",
+      "dense_3/bias:0"
+    ]
+  },
+  {
+    "name": "dense_4",
     "type": "Dense",
     "config": {
       "units": 10,
       "activation": "softmax"
     },
     "weights": [
-      "dense_output/kernel:0",
-      "dense_output/bias:0"
+      "dense_4/kernel:0",
+      "dense_4/bias:0"
     ]
   }
 ]
